@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    background-color: rgb(170, 210, 227, 0.5);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center; /* 垂直方向中央揃え */
+    padding: 10px 20px; /* 上下左右の余白 */
+}
+
+.logo img{
+    border-radius: 20%;
+}
+
+.menu {
+    color:  rgb(170, 210, 227);
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    padding: 5px 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
