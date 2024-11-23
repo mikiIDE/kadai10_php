@@ -34,12 +34,12 @@ include 'inc/header.php';
             </div>
             <div class="form-group">
                 <label for="sort">ジャンル：</label>
-                <input type="checkbox" name="sort" value="HTML">HTML
-                <input type="checkbox" name="sort" value="CSS">CSS
-                <input type="checkbox" name="sort" value="JavaScript">JavaScript
-                <input type="checkbox" name="sort" value="API">API
-                <input type="checkbox" name="sort" value="PHP">PHP
-                <input type="checkbox" name="sort" value="others">others
+                <input type="checkbox" name="sor_html" value="1">HTML
+                <input type="checkbox" name="sort_css" value="1">CSS
+                <input type="checkbox" name="sort_js" value="1">JavaScript
+                <input type="checkbox" name="sort_api" value="1">API
+                <input type="checkbox" name="sort_php" value="1">PHP
+                <input type="checkbox" name="sort_others" value="1">others
             </div>
             <div class="form-group">
                 <label for="comment">一言：</label><br>
@@ -51,7 +51,6 @@ include 'inc/header.php';
             </div>
             <button type="submit" class="submit-btn">レシピ掲載</button>
         </form>
-
 
         <!-- Main[End] -->
 </main>

@@ -1,7 +1,6 @@
-これは最終的に削除していいかも？
-
-project/
+project/（htdocs配下）
 ├── index.php
+├── insert.php
 ├── share.php
 ├── read.php
 ├── css/
@@ -12,13 +11,39 @@ project/
     ├── footer.php
     └── common_head.php
 
-11月22日 DONE
+◆データベースを利用した基本的なweb開発の流れ
+1. ローカル開発環境の準備
+   └→ VSCode, XAMPP/MAMPなどでローカルサーバー構築
+2. データベース設計・作成
+   └→ phpMyAdminでテーブル作成
+3. プログラム開発（PHP, HTML, CSS）
+   └→ VSCodeで開発
+4. テスト
+   └→ ローカル環境でテスト
+5. 本番環境へのデプロイ
+   └→ さくらサーバーへアップロード（※GitHubへはDB系の情報を絶対に出さない！）
+
+
+
+【今日のTO DO残り】
+・phpMyAdminとの接続確認
+
+【DOING】
+
+
+
+【TO DO】
+・phpMyAdminとの接続確認
+
+
+
+【DONE】
+11月23日 DONE
+・ヘッダー、フッター、includeに必要な情報と処理
+・share.php（講義ではindex.phpだった部分）とinsert.phpのたたき台作成
+
+11月22日
 ・サイト名決定「CODE LINK」
 ・ロゴ？作成
 ・ヘッダー作成
 
-TO DO
-・
-
-１１月２３日（土曜日）のタスク
-・share.php（講義ではindex.phpだった部分）とinsert.phpのたたき台作成

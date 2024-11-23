@@ -4,9 +4,19 @@
 ini_set("display_errors", 1);
 
 //1. POSTデータ取得
-$name = $_POST["name"];
-$email = $_POST["email"];
-$naiyou = $_POST["naiyou"];
+$pagename = $_POST["pagename"];
+$url = $_POST["url"];
+$comment = $_POST["comment"];
+$password = $_POST["password"];
+// チェックボックスの値を取得（チェックされていない場合は0をセット）
+$sort_html = isset($_POST["sort_html"]) ? 1 : 0;
+$sort_css = isset($_POST["sort_css"]) ? 1 : 0;
+$sort_js = isset($_POST["sort_js"]) ? 1 : 0;
+$sort_api = isset($_POST["sort_api"]) ? 1 : 0;
+$sort_php = isset($_POST["sort_php"]) ? 1 : 0;
+$sort_others = isset($_POST["sort_others"]) ? 1 : 0;
+// パスワードのハッシュ化
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 //2. fileopen、ではなく、DB接続します。PHP DATA OBJECTでPDO！
 try {
@@ -18,11 +28,21 @@ try {
 
 
 //３．データ登録SQL作成 vindValueを介することでSQLインジェクションを避けることができる
-$sql = "INSERT INTO gs_an_table(name,email,naiyou,indate)VALUES(:name,:email,:naiyou, sysdate() );"; //:バインド変数（橋渡し役の変数）
+$sql = "INSERT INTO code_links 
+        (pagename, url, sort_html, sort_css, sort_js, sort_api, sort_php, sort_others, comment, password) 
+        VALUES 
+        (:pagename, :url, :sort_html, :sort_css, :sort_js, :sort_api, :sort_php, :sort_others, :comment, :password)"; //:バインド変数（橋渡し役の変数）
 $stmt = $pdo->prepare($sql); //クエリ（要求）をセット。
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);  //Integer（文字の場合 PDO::PARAM_STR)（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':email', $email, PDO::PARAM_STR);
-$stmt->bindValue(':naiyou', $naiyou, PDO::PARAM_STR);
+$stmt->bindValue(':pagename', $pagename, PDO::PARAM_STR); //Integer（文字の場合 PDO::PARAM_STR)（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':url', $url, PDO::PARAM_STR);
+$stmt->bindValue(':sort_html', $sort_html, PDO::PARAM_INT);
+$stmt->bindValue(':sort_css', $sort_css, PDO::PARAM_INT);
+$stmt->bindValue(':sort_js', $sort_js, PDO::PARAM_INT);
+$stmt->bindValue(':sort_api', $sort_api, PDO::PARAM_INT);
+$stmt->bindValue(':sort_php', $sort_php, PDO::PARAM_INT);
+$stmt->bindValue(':sort_others', $sort_others, PDO::PARAM_INT);
+$stmt->bindValue(':comment', $comment, PDO::PARAM_STR);
+$stmt->bindValue(':password', $hashed_password, PDO::PARAM_STR);  // ハッシュ値なので（＝英数字なので）STR
 $status = $stmt->execute(); //クエリ（要求）実行役。trueかfalseが返ってくる
 
 //４．データ登録処理後
