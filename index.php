@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+        <!-- isset()は変数が定義されているかをチェックする関数 -->
+        <!-- つまり$additional_cssが記述されている場合は追加で読み込まれる -->
     <?php if (isset($additional_css)) echo $additional_css; ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +32,6 @@ include 'inc/header.php';      // ヘッダーを読み込み
     </p>
 </main>
 
-<?php include 'inc/footer.php'; ?>  // フッターを読み込み
+<?php include 'inc/footer.php'; ?> 
 </body>
 </html>

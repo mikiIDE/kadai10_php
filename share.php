@@ -43,7 +43,11 @@ include 'inc/header.php';
             </div>
             <div class="form-group">
                 <label for="comment">一言：</label><br>
-                <textarea id="comment" name="comment" rows="10" cols="40" placeholder="内容や紹介文をどうぞ！" required></textarea>
+                <textarea id="comment" name="comment" rows="10" cols="40" placeholder="内容や紹介文をどうぞ！最後にあなたのお名前も記入いただけると分かりやすくて助かります！" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード：</label>
+                <input type="text" id="password" name="password" placeholder="編集や削除用のパスワードをいれてください" required>
             </div>
             <button type="submit" class="submit-btn">レシピ掲載</button>
         </form>
