@@ -1,0 +1,26 @@
+main {
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+    color: #2a383e;
+    background-image: url("/img/CODELINK.png");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /*ちょっと透き通る感じ*/
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(170, 210, 227, 0.5);
+}

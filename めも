@@ -1,5 +1,17 @@
 これは最終的に削除していいかも？
 
+project/
+├── index.php
+├── share.php
+├── read.php
+├── css/
+│   ├── style.css
+│   └── share.css
+└── inc/
+    ├── header.php
+    ├── footer.php
+    └── common_head.php
+
 11月22日 DONE
 ・サイト名決定「CODE LINK」
 ・ロゴ？作成
@@ -10,7 +22,4 @@ TO DO
 ・
 
 １１月２３日（土曜日）のタスク
-・全体的な簡易レイアウト作成
-・API確認
-・MySQL側の理解深堀
-
+・share.php（講義ではindex.phpだった部分）とinsert.phpのたたき台作成
