@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/background.css"> <!-- 背景用 -->
         <!-- isset()は変数が定義されているかをチェックする関数 -->
         <!-- つまり$additional_cssが記述されている場合は追加で読み込まれる -->
     <?php if (isset($additional_css)) echo $additional_css; ?>
@@ -19,7 +20,8 @@ $page_title = 'CODE ∞ LINK';  // ページのタイトルを設定
 include 'inc/common_head.php';  // 共通のhead部分を読み込み
 include 'inc/header.php';      // ヘッダーを読み込み
 ?>
-
+<!-- 背景用 -->
+<div class="bg"></div>
 <main>
     <p class="greeting">
         コードリンクへようこそ！<br>
@@ -33,5 +35,6 @@ include 'inc/header.php';      // ヘッダーを読み込み
 </main>
 
 <?php include 'inc/footer.php'; ?> 
+<script src="/js/background.js"></script>  <!-- 背景用のJS -->
 </body>
 </html>

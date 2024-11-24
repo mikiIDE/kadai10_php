@@ -25,22 +25,28 @@ project/（htdocs配下）
 
 
 
+【TO DO】
+・insert.phpでデータ入力後の遷移先画面作成
+・read.phpの画面たたき台完成
+・↑表示機能、編集/削除ボタン、コメント機能
+
 【今日のTO DO残り】
-・phpMyAdminとの接続確認
+・insert.phpでデータ入力後の遷移先画面作成
+・read.phpの画面たたき台完成
 
 【DOING】
 
 
 
-【TO DO】
-・phpMyAdminとの接続確認
-
-
-
 【DONE】
-11月23日 DONE
+11月24日
+・動く背景お試し実装
+・
+
+11月23日
 ・ヘッダー、フッター、includeに必要な情報と処理
 ・share.php（講義ではindex.phpだった部分）とinsert.phpのたたき台作成
+・phpMyAdminとinsert.phpの接続確認
 
 11月22日
 ・サイト名決定「CODE LINK」
