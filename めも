@@ -26,12 +26,10 @@ project/（htdocs配下）
 
 
 【TO DO】
-・insert.phpでデータ入力後の遷移先画面作成
 ・read.phpの画面たたき台完成
 ・↑表示機能、編集/削除ボタン、コメント機能
 
 【今日のTO DO残り】
-・insert.phpでデータ入力後の遷移先画面作成
 ・read.phpの画面たたき台完成
 
 【DOING】
@@ -41,7 +39,7 @@ project/（htdocs配下）
 【DONE】
 11月24日
 ・動く背景お試し実装
-・
+・insert.phpでデータ入力後の遷移先画面（confirm.php）作成
 
 11月23日
 ・ヘッダー、フッター、includeに必要な情報と処理

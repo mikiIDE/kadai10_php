@@ -1,7 +1,10 @@
+<!-- insert.php -->
 <!-- DBとの接続と、SQLの作成を担当する -->
 <?php
 //エラー表示。下記内容をphpファイルすべての頭にくっ付けるとエラーが見える化する。
 ini_set("display_errors", 1);
+//セッションスタート！
+session_start();
 
 //1. POSTデータ取得
 $pagename = $_POST["pagename"];
@@ -25,6 +28,19 @@ try {
 } catch (PDOException $e) {
     exit('DBConnectError:' . $e->getMessage()); //データベース接続で起きたエラーを取得する！
 }
+
+// ※追加※表示用にセッションに保存
+$_SESSION['form_data'] = [
+    'pagename' => $pagename,
+    'url' => $url,
+    'comment' => $comment,
+    'sort_html' => $sort_html,
+    'sort_css' => $sort_css,
+    'sort_js' => $sort_js,
+    'sort_api' => $sort_api,
+    'sort_php' => $sort_php,
+    'sort_others' => $sort_others
+];
 
 
 //３．データ登録SQL作成 vindValueを介することでSQLインジェクションを避けることができる
@@ -51,8 +67,8 @@ if ($status == false) {
     $error = $stmt->errorInfo();
     exit("SQLError:" . $error[2]);
 } else {
-    //５．index.phpへリダイレクト。処理が終わったら（うまくいったら）ドコドコに戻す。
-    header("Location:index.php");
+    $_SESSION['success_message'] = "以下の情報を登録しました！";
+    header("Location:confirm.php");
     exit();
 }
 ?>
