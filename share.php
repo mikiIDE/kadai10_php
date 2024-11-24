@@ -1,7 +1,6 @@
 <!-- 投稿をする画面（post.phpに相当する） -->
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <title>魔法分配！</title>
 </head>
-
 <body>
     <?php
     $page_title = '魔法分配！';  // ページのタイトルを設定

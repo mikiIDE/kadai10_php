@@ -1,3 +1,4 @@
+<!-- confirm.php 情報取得と簡易表示のページ -->
 <?php
 session_start();
 
@@ -120,7 +121,7 @@ $data = $_SESSION['form_data'];
             </div>
         </div>
     </main>
-
+    <?php include 'inc/footer.php'; ?>
     <?php
     include 'inc/footer.php';
     // 表示が終わったらセッションデータを削除

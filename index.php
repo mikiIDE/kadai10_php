@@ -30,7 +30,7 @@ include 'inc/header.php';      // ヘッダーを読み込み
     </p>
     <p class="guide">
         コードの紹介をしたい方は「SHARE」<br>
-        コードを見たい方は「READ」へ進んでね
+        コードを見たい、編集したい方は「READ」へ進んでね
     </p>
 </main>
 

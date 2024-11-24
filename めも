@@ -1,11 +1,15 @@
 project/（htdocs配下）
 ├── index.php
 ├── insert.php
-├── share.php
+├── confirm.php
 ├── read.php
+├── share.php
+├── js/
+│   ├── background.js
 ├── css/
 │   ├── style.css
-│   └── share.css
+│   ├── share.css
+│   └── background.css
 └── inc/
     ├── header.php
     ├── footer.php
@@ -23,23 +27,22 @@ project/（htdocs配下）
 5. 本番環境へのデプロイ
    └→ さくらサーバーへアップロード（※GitHubへはDB系の情報を絶対に出さない！）
 
-
+※同ページで登録した（処理した）データの再表示を行わないこと！
+※必ず入力、データ処理、表示など役割を分担させること！
 
 【TO DO】
 ・read.phpの画面たたき台完成
 ・↑表示機能、編集/削除ボタン、コメント機能
 
 【今日のTO DO残り】
-・read.phpの画面たたき台完成
 
 【DOING】
-
-
+・read.phpの画面たたき台完成
 
 【DONE】
 11月24日
 ・動く背景お試し実装
-・insert.phpでデータ入力後の遷移先画面（confirm.php）作成
+・insert.phpでデータ処理後の遷移先画面（confirm.php）作成
 
 11月23日
 ・ヘッダー、フッター、includeに必要な情報と処理
