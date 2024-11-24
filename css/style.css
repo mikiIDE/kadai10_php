@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color:rgba(190, 200, 220, 0.7);
+    background-color: rgba(190, 200, 220, 0.7);
 }
 
 .header-container {
@@ -35,6 +35,11 @@ main {
     flex: 1;
     /* 残りの空間を全て使用 */
     padding: 20px;
+}
+
+.main {
+    margin: 100px auto;
+    text-align: center;
 }
 
 .footer {

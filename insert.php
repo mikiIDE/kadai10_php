@@ -12,6 +12,7 @@ $url = $_POST["url"];
 $comment = $_POST["comment"];
 $password = $_POST["password"];
 // チェックボックスの値を取得（チェックされていない場合は0をセット）
+// isset()は変数が定義されているかをチェックする関数
 $sort_html = isset($_POST["sort_html"]) ? 1 : 0;
 $sort_css = isset($_POST["sort_css"]) ? 1 : 0;
 $sort_js = isset($_POST["sort_js"]) ? 1 : 0;
@@ -41,7 +42,6 @@ $_SESSION['form_data'] = [
     'sort_php' => $sort_php,
     'sort_others' => $sort_others
 ];
-
 
 //３．データ登録SQL作成 vindValueを介することでSQLインジェクションを避けることができる
 $sql = "INSERT INTO code_links 

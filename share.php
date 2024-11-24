@@ -35,7 +35,8 @@
                 </div>
                 <div class="form-group">
                     <label for="sort">ジャンル：</label>
-                    <input type="checkbox" name="sor_html" value="1">HTML
+                    <!-- value="1"は"0"でもいいけど、"1"が慣例的に分かりやすいらしい -->
+                    <input type="checkbox" name="sort_html" value="1">HTML
                     <input type="checkbox" name="sort_css" value="1">CSS
                     <input type="checkbox" name="sort_js" value="1">JavaScript
                     <input type="checkbox" name="sort_api" value="1">API
@@ -44,13 +45,13 @@
                 </div>
                 <div class="form-group">
                     <label for="comment">一言：</label><br>
-                    <textarea id="comment" name="comment" rows="10" cols="40" placeholder="内容や紹介文をどうぞ！最後にあなたのお名前も記入いただけると分かりやすくて助かります！" required></textarea>
+                    <textarea id="comment" name="comment" rows="10" cols="40" placeholder="内容や紹介文をどうぞ！！" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="password">パスワード：</label>
                     <input type="text" id="password" name="password" placeholder="編集や削除用のパスワードをいれてください" required>
                 </div>
-                <button type="submit" class="submit-btn">レシピ掲載</button>
+                <button type="submit" class="submit-btn">掲載</button>
             </form>
         </div>
     </main>

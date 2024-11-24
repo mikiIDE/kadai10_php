@@ -136,6 +136,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
     <main>
         <div class="container">
             <!-- フィルターボタン -->
+            <!-- data-filter="選択されているもの" -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="html">HTML</button>
@@ -149,6 +150,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             <!-- カードグリッド -->
             <div class="cards-grid">
                 <?php foreach ($values as $v): ?>
+                    <!-- data-html等の「data...」はカスタムデータ属性。実際に表示などはせず、データを持たせるためのもの -->
                     <div class="card"
                         data-html="<?= $v['sort_html'] ?>"
                         data-css="<?= $v['sort_css'] ?>"
@@ -160,6 +162,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
                         <a href="<?= htmlspecialchars($v['url']) ?>" class="card-link" target="_blank"><?= htmlspecialchars($v['url']) ?></a>
 
                         <div class="card-tags">
+                            <!-- 条件：それがあるときのみspanをつけるよ、ってやつ -->
                             <?php if ($v['sort_html']): ?><span class="tag">HTML</span><?php endif; ?>
                             <?php if ($v['sort_css']): ?><span class="tag">CSS</span><?php endif; ?>
                             <?php if ($v['sort_js']): ?><span class="tag">JavaScript</span><?php endif; ?>
@@ -169,6 +172,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
                         </div>
 
                         <div class="card-comment">
+                            <!-- nl2br → テキスト入力内の改行をbrタグに変換できる -->
                             <?= nl2br(htmlspecialchars($v['comment'])) ?>
                         </div>
                     </div>
