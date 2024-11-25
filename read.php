@@ -1,5 +1,7 @@
+<!-- read.php -->
 <!-- 授業で言うところのselect.php（のはず） -->
 <?php
+ini_set("display_errors", 1);
 //2. DB接続します
 try {
     //Password:MAMP='root',XAMPP=''
@@ -175,6 +177,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
                             <!-- nl2br → テキスト入力内の改行をbrタグに変換できる -->
                             <?= nl2br(htmlspecialchars($v['comment'])) ?>
                         </div>
+                        <button type="button" class="delete" onclick="confirmDelete(<?= $v['id'] ?>)">削除</button>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -189,7 +192,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // アクティブクラスの切り替え
+                    // タグの切り替え
                     filterBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
 
@@ -209,6 +212,10 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
                 });
             });
         });
+        //削除操作用の関数
+        function confirmDelete(id) {
+            window.location.href = `delete_confirm.php?id=${id}`;
+        }
     </script>
 </body>
 

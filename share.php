@@ -1,3 +1,4 @@
+<!-- share.php -->
 <!-- 投稿をする画面（post.phpに相当する） -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -49,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">パスワード：</label>
-                    <input type="text" id="password" name="password" placeholder="編集や削除用のパスワードをいれてください" required>
+                    <input type="text" id="password" name="password" placeholder="削除用のパスワードをいれてください" required>
                 </div>
                 <button type="submit" class="submit-btn">掲載</button>
             </form>

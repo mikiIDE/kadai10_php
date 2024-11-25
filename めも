@@ -4,6 +4,8 @@ project/（htdocs配下）
 ├── confirm.php
 ├── read.php
 ├── share.php
+├── delete_confirm.php
+├── delete.php
 ├── js/
 │   ├── background.js
 ├── css/

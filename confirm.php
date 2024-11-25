@@ -1,5 +1,6 @@
 <!-- confirm.php 情報取得と簡易表示のページ -->
 <?php
+ini_set("display_errors", 1);
 session_start();
 
 // セッションに保存されたデータがない場合はシェア画面へリダイレクト
@@ -113,6 +114,7 @@ $data = $_SESSION['form_data'];
 
             <div class="confirm-item">
                 <span class="label">一言：</span>
+                <!-- nl2br = テキストで入力された改行をbrへ変換！ -->
                 <?php echo nl2br(htmlspecialchars($data['comment'])); ?>
             </div>
 
