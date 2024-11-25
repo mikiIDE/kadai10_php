@@ -54,7 +54,6 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             margin: 20px 0;
             text-align: center;
         }
-
         .filter-btn {
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid #6c757d;
@@ -69,7 +68,6 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             background: #6c757d;
             color: white;
         }
-
         /* カードグリッド */
         .cards-grid {
             display: grid;
@@ -77,7 +75,6 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             gap: 20px;
             margin-top: 20px;
         }
-
         .card {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
@@ -85,7 +82,6 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-
         .card:hover {
             transform: translateY(-5px);
         }

@@ -111,7 +111,6 @@ $data = $_SESSION['form_data'];
                 echo implode(', ', $genres);
                 ?>
             </div>
-
             <div class="confirm-item">
                 <span class="label">一言：</span>
                 <!-- nl2br = テキストで入力された改行をbrへ変換！ -->

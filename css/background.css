@@ -6,7 +6,7 @@
     position: fixed;  /* fixedに変更 → スクロールに影響されない */
     top: 0;
     left: 0;
-    z-index: -1;  /* 背面に配置 */
+    z-index: -1;  /* 背面に配置 *//* メイン側のCSSも必要に応じてz-index設定 */
 }
 
 .line {

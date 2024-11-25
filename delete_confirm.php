@@ -78,30 +78,25 @@ if ($status) {
             gap: 10px;
             justify-content: center;
         }
-
         .btn {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-
         .btn-delete {
             background: #dc3545;
             color: white;
         }
-
         .btn-cancel {
             background: #6c757d;
             color: white;
         }
     </style>
 </head>
-
 <body>
     <?php include 'inc/header.php'; ?>
     <div class="bg"></div>
-
     <main>
         <div class="confirm-container">
             <h2>削除確認</h2>
@@ -109,13 +104,11 @@ if ($status) {
                 <p>以下の投稿を削除しますか？</p>
                 <p>※この操作は取り消せません。</p>
             </div>
-
             <div class="item-details">
                 <p><strong>サイト名：</strong> <?= htmlspecialchars($record['pagename']) ?></p>
                 <p><strong>URL：</strong> <?= htmlspecialchars($record['url']) ?></p>
                 <p><strong>コメント：</strong> <?= nl2br(htmlspecialchars($record['comment'])) ?></p>
             </div>
-
             <form action="delete.php" method="post" class="delete-form">
                 <!-- idは隠す -->
                 <input type="hidden" name="id" value="<?= $id ?>">
@@ -130,7 +123,6 @@ if ($status) {
             </form>
         </div>
     </main>
-
     <?php include 'inc/footer.php'; ?>
     <script src="/js/background.js"></script>
 </body>

@@ -57,6 +57,7 @@
         </div>
     </main>
     <!-- Main[End] -->
+     
     <?php include 'inc/footer.php'; ?>
     <script src="/js/background.js"></script> <!-- 背景用のJS -->
 </body>

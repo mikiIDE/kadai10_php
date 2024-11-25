@@ -1,3 +1,4 @@
+// 背景で動くjs
 function createLines() {
     let line = document.createElement("div");
     line.setAttribute("class", "line");

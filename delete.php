@@ -18,7 +18,7 @@ try {
 $id = $_POST['id'];
 $password = $_POST['password'];
 
-// パスワード確認
+// テーブルからパスワード確認
 $sql = "SELECT password FROM code_links WHERE id = :id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
