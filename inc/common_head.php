@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
        <!-- isset()は変数が定義されているかをチェックする関数 -->
        <!-- つまり$additional_cssが記述されている場合は追加で読み込まれる -->
     <?php if (isset($additional_css)) echo $additional_css; ?>

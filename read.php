@@ -6,6 +6,7 @@ ini_set("display_errors", 1);
 try {
     //Password:MAMP='root',XAMPP=''
     $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost', 'root', '');
+    // $pdo = new PDO('mysql:dbname=einekleine_kadai10_php;charset=utf8;host=*********.db.sakura.ne.jp', 'user-name', '********');
 } catch (PDOException $e) {
     exit('DBConnection Error:' . $e->getMessage());
 }
@@ -35,8 +36,8 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/background.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
@@ -54,6 +55,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             margin: 20px 0;
             text-align: center;
         }
+
         .filter-btn {
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid #6c757d;
@@ -68,6 +70,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             background: #6c757d;
             color: white;
         }
+
         /* カードグリッド */
         .cards-grid {
             display: grid;
@@ -75,6 +78,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             gap: 20px;
             margin-top: 20px;
         }
+
         .card {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
@@ -82,6 +86,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
@@ -180,7 +185,7 @@ $json = json_encode($values, JSON_UNESCAPED_UNICODE);
         </div>
     </main>
     <?php include 'inc/footer.php'; ?>
-    <script src="/js/background.js"></script>
+    <script src="js/background.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-btn');

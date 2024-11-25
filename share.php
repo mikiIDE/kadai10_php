@@ -2,16 +2,18 @@
 <!-- 投稿をする画面（post.phpに相当する） -->
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/background.css"><!-- 背景用 -->
-    <link rel="stylesheet" href="/css/share.css">
+    <link rel="stylesheet" href="css/background.css"><!-- 背景用 -->
+    <link rel="stylesheet" href="css/share.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <title>魔法分配！</title>
 </head>
+
 <body>
     <?php
     $page_title = '魔法分配！';  // ページのタイトルを設定
@@ -57,9 +59,9 @@
         </div>
     </main>
     <!-- Main[End] -->
-     
+
     <?php include 'inc/footer.php'; ?>
-    <script src="/js/background.js"></script> <!-- 背景用のJS -->
+    <script src="js/background.js"></script> <!-- 背景用のJS -->
 </body>
 
 </html>

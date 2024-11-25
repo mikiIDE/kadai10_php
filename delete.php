@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 // DB接続
 try {
     $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost', 'root', '');
+    // $pdo = new PDO('mysql:dbname=einekleine_kadai10_php;charset=utf8;host=*********.db.sakura.ne.jp', 'user-name', '********');
 } catch (PDOException $e) {
     exit('DBConnection Error:' . $e->getMessage());
 }
@@ -32,7 +33,7 @@ if ($status) {
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $status = $stmt->execute();
-        
+
         if ($status) {
             $_SESSION['success_message'] = "投稿を削除しました。";
         } else {

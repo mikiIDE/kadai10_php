@@ -16,11 +16,12 @@ $data = $_SESSION['form_data'];
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/background.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
@@ -52,6 +53,7 @@ $data = $_SESSION['form_data'];
         .label {
             font-weight: bold;
         }
+
         .btn {
             background-color: rgba(190, 200, 220, 0.9);
             color: #2a383e;
@@ -61,10 +63,12 @@ $data = $_SESSION['form_data'];
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .btn:hover {
             background-color: rgba(170, 190, 210, 0.9);
         }
-        a{
+
+        a {
             text-decoration: none;
             color: black;
         }
@@ -128,7 +132,7 @@ $data = $_SESSION['form_data'];
     // 表示が終わったらセッションデータを削除
     unset($_SESSION['form_data']);
     ?>
-    <script src="/js/background.js"></script>
+    <script src="js/background.js"></script>
 </body>
 
 </html>

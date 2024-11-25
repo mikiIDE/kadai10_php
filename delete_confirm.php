@@ -7,6 +7,7 @@ session_start();
 // DB接続
 try {
     $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost', 'root', '');
+    // $pdo = new PDO('mysql:dbname=einekleine_kadai10_php;charset=utf8;host=*********.db.sakura.ne.jp', 'user-name', '********');
 } catch (PDOException $e) {
     exit('DBConnection Error:' . $e->getMessage());
 }
@@ -46,8 +47,8 @@ if ($status) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/background.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
@@ -78,22 +79,26 @@ if ($status) {
             gap: 10px;
             justify-content: center;
         }
+
         .btn {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+
         .btn-delete {
             background: #dc3545;
             color: white;
         }
+
         .btn-cancel {
             background: #6c757d;
             color: white;
         }
     </style>
 </head>
+
 <body>
     <?php include 'inc/header.php'; ?>
     <div class="bg"></div>
@@ -124,7 +129,7 @@ if ($status) {
         </div>
     </main>
     <?php include 'inc/footer.php'; ?>
-    <script src="/js/background.js"></script>
+    <script src="js/background.js"></script>
 </body>
 
 </html>

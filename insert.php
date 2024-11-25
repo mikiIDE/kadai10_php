@@ -27,6 +27,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 try {
     //Password:MAMP='root',XAMPP='' dbname=自分で作成したdb名, 'root',''
     $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost', 'root', '');
+    // $pdo = new PDO('mysql:dbname=einekleine_kadai10_php;charset=utf8;host=*********.db.sakura.ne.jp', 'user-name', '********');
 } catch (PDOException $e) {
     exit('DBConnectError:' . $e->getMessage()); //データベース接続で起きたエラーを取得する！
 }
